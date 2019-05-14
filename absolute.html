@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Position - Absolute</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            outline: 5px solid black;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+            font-weight: 900;
+            color: white;
+        }
+        
+        #a1 {
+            background-color: deepskyblue;
+            position: absolute;
+            
+            /*
+            absolute 포지션이란?
+            - 자신을 싸고 있는 부모박스를 기준으로 하여 위치를 정하는 포지션이다.
+            - 누가 부모인가?
+            싸고 있는 요소가 부모가 아니고 싸고 있는 요소중 position이 static이 아닌 요소가 부모다.
+            - 부모요소가 없으면 최종적으로 body가 부모가 된다.
+            */
+
+            
+            /*top: 50px;
+            left: 50px;*/
+            
+            /*top: 100px;
+            right: 100px;*/
+            
+            /*bottom: 100px;
+            left: 100px;*/
+            
+            bottom: 100px;
+            right: 100px;
+            
+            
+            /*
+            "부모요소에 기준"으로 위치상태값에 영향을 받는다.
+            
+            마진 위치상태를 모두 움직여도 다른 요소들이 영향을 받지 않는다!*/
+        }
+        
+        #a2 {
+            background-color: palevioletred;
+        }
+        
+        #a3 {
+            background-color: mediumpurple;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="a1">a1</div>
+    <div id="a2">a2</div>
+    <div id="a3">a3</div>
+</body>
+</html>

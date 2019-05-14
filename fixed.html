@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Position - Fixed</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            outline: 5px solid black;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+            font-weight: 900;
+            color: white;
+        }
+        
+        #s1 {
+            background-color: deepskyblue;
+            
+        }
+        
+        #s2 {
+            background-color: palevioletred;
+            height: 2000px;
+        }
+        
+        #f1 {
+            background-color: mediumpurple;
+            position: fixed;
+            
+            /*
+            fixed 포지션이란?
+            - 위치값 설정을 할 경우 보이는 화면을 기준하여 위치를 변경하고 화면에서 사라지지 않게 설정할 수 있다.
+            - fixed를 싸고 있는 부모가 static이 아니어도 부모자격이 없고 보이는 화면만 기준함!
+            - fixed는 부모자격이 있다.(하위요소를(absolute)등 거느릴 수 있다!)
+            */
+            
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        
+        #a1 {
+            position: absolute;
+            right: 0;
+            background-color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="s1">s1</div>
+    <div id="s2">s2</div>
+    <div id="f1">f1
+        <div id="a1">a1</div>
+    </div>
+</body>
+</html>

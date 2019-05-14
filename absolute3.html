@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Position - Absolute3</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            outline: 5px solid black;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+            font-weight: 900;
+            color: white;
+        }
+
+        #a1 {
+            background-color: deepskyblue;
+            position: absolute;
+
+            /*
+            absolute 포지션이란?
+            - 자신을 싸고 있는 부모박스를 기준으로 하여 위치를 정하는 포지션이다.
+            - 누가 부모인가?
+            싸고 있는 요소가 부모가 아니고 싸고 있는 요소중 position이 static이 아닌 요소가 부모다.
+            - 부모요소가 없으면 최종적으로 body가 부모가 된다.
+            */
+
+            /*top: 50px;
+            left: 50px;*/
+
+            /*top: 100px;
+            right: 100px;*/
+
+            /*bottom: 100px;
+            left: 100px;*/
+
+            bottom: 0px;
+            right: 0px;
+
+            /*
+            "부모요소에 기준"으로 위치상태값에 영향을 받는다.
+            
+            마진 위치상태를 모두 움직여도 다른 요소들이 영향을 받지 않는다!*/
+        }
+
+        #s2 {
+            background-color: deepskyblue;
+        }
+
+        #s3 {
+            background-color: deepskyblue;
+        }
+        
+        #p1 {
+            /*position: relative;*/
+            width: 200px;
+            height: 200px;
+            background-color: rebeccapurple;
+        }
+        
+        #p2 {
+            /*position: relative;*/
+            width: 300px;
+            height: 300px;
+            background-color: deeppink;
+        }
+        
+        #p3 {
+            /*position: relative;*/
+            width: 400px;
+            height: 400px;
+            background-color: darkgreen;
+        }
+        
+        #p4 {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: darkred;
+        }
+        
+        /*static 요소 아래 있는 absolute*/
+        #a2 {
+            position: absolute;
+            background-color: aquamarine;
+            /*
+            만약 absolute 요소를 위치설정값 없이 사용할 때, static 요소 아래 올 경우 처음위치 그대로 유지한다. 얌전
+            -> 젠틀 앱솔루트!
+            */
+        }
+        
+        #a3 {
+            position: absolute;
+            background-color: palevioletred;
+            left: 100px;
+            
+            /*
+            top요소는 그대로 현재위치를 유지하면서 left만 부모로부터 위치를 변경함.
+            이때 top을 설정하면 부모요소로 이동한다.
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="p4">p4
+        <div id="p3">p3
+            <div id="p2">p2
+                <div id="p1">p1
+                    <div id="a1">a1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="s2">s2</div>
+    <div id="s3">s3</div>
+    <div id="a2">a2</div>
+    <div id="a3">a3</div>
+</body></html>
